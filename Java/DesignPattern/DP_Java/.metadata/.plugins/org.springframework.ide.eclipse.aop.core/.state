@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="journals"/>
+<aop-project name="CrossOverJA"/>
+<aop-project name="CrossOverJournals"/>
+</aop-reference-model>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Main.AdapterPattern&apos; to &apos;AdapterPatternDemo&apos;&#x0A;- Original project: &apos;7AdapterPattern&apos;&#x0A;- Original element: &apos;Main.AdapterPattern&apos;&#x0A;- Renamed element: &apos;Main.AdapterPatternDemo&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;AdapterPattern&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;Main{AdapterPattern.java[AdapterPattern" matchStrategy="1" name="AdapterPatternDemo" qualified="false" references="true" similarDeclarations="false" stamp="1478588008357" textual="false" version="1.0"/>
+</session>

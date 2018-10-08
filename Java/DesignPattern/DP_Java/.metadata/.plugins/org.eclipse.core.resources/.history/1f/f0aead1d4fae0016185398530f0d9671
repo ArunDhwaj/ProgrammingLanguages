@@ -1,0 +1,6 @@
+package com.crossover.journals.Services;
+
+public class UserServiceImpl implements UserService 
+{
+
+}

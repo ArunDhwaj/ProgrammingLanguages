@@ -1,0 +1,51 @@
+package com.crossover.journals.Models;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+/**
+ * 
+ * Models: Category: POJO to DB Table Mapping.
+ * @Author: Arun Dhwaj
+ * @Date: 19th Nov'16
+ * 
+ */
+
+@Entity
+@Table(name="Category")
+public class Category 
+{
+	private static final long serialVersionUID = -2016036248002296042L;
+	
+	@Id
+    @GeneratedValue
+    private Long id;
+
+    @Column(nullable = false)
+    private String name;
+
+	public Long getId() 
+	{
+		return id;
+	}
+
+	public void setId(Long id) 
+	{
+		this.id = id;
+	}
+
+	public String getName() 
+	{
+		return name;
+	}
+
+	public void setName(String name) 
+	{
+		this.name = name;
+	}
+    
+    
+}

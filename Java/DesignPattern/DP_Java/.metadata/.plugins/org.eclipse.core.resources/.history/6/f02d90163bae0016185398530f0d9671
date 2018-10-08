@@ -1,0 +1,47 @@
+package com.crossover.journals.Models;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.PrePersist;
+import javax.persistence.Table;
+
+/**
+ * 
+ * Models: Subscription: POJO to DB Table Mapping.
+ * @Author: Arun Dhwaj
+ * @Date: 19th Nov'16
+ * 
+ */
+
+@Entity
+@Table(name="Subscription")
+public class Subscription 
+{
+	private static final long serialVersionUID = -2016026248002296042L;
+	
+	@Id
+	@GeneratedValue
+	private Long id;
+
+	@ManyToOne(optional = false)
+	private User user;
+
+	@Column(nullable = false)
+	private Date date;
+
+	@ManyToOne(optional= false)
+	private Category category;
+
+	@PrePersist
+	private void onPersist() 
+	{
+		date = new Date();
+	}	
+	
+	
+}

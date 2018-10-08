@@ -1,0 +1,12 @@
+package com.crossover.journals.Models;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name="User")
+public class User 
+{
+	private static final long serialVersionUID = -5527566248002296042L;
+}

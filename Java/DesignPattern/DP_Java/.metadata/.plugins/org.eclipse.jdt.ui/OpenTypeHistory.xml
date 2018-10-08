@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=3ProxyPattern/src&lt;OriginalClasses{Subject.java[Subject" modifiers="1025" timestamp="1478439998000"/>
+<typeInfo handle="=4DecoratorPattern/src&lt;Main{Component.java[Component" modifiers="1025" timestamp="1478449248000"/>
+<typeInfo handle="=6StrategyPattern/src&lt;Choices{IChoice.java[IChoice" modifiers="513" timestamp="1478495897000"/>
+<typeInfo handle="=8CommandPattern/src&lt;Main{ICommand.java[ICommand" modifiers="513" timestamp="1478590101000"/>
+<typeInfo handle="=9IteratorPatterns/src&lt;Iterator{IIterator.java[IIterator" modifiers="513" timestamp="1478598627000"/>
+<typeInfo handle="=9IteratorPatterns/src&lt;Aggregate{ISubject.java[ISubject" modifiers="513" timestamp="1478598883000"/>
+<typeInfo handle="=11FactoryMethodPatterns/src&lt;Main{IAnimal.java[IAnimal" modifiers="513" timestamp="1478611251000"/>
+<typeInfo handle="=11FactoryMethodPatterns/src&lt;Main{IAnimalFactory.java[IAnimalFactory" modifiers="1024" timestamp="1478611759000"/>
+<typeInfo handle="=14BuilderPatterns/src&lt;Main{IBuilder.java[IBuilder" modifiers="513" timestamp="1478698674000"/>
+<typeInfo handle="=15FlyweightPatterns/src&lt;Main{IRobot.java[IRobot" modifiers="513" timestamp="1478759871000"/>
+<typeInfo handle="=15FlyweightPatterns_2/src&lt;Main{IRobot.java[IRobot" modifiers="513" timestamp="1478761495000"/>
+<typeInfo handle="=16AbstractFactoryPatterns/src&lt;Main{ITollywoodMovie.java[ITollywoodMovie" modifiers="513" timestamp="1478766338000"/>
+<typeInfo handle="=16AbstractFactoryPatterns/src&lt;Main{IBollywoodMovie.java[IBollywoodMovie" modifiers="513" timestamp="1478766423000"/>
+<typeInfo handle="=16AbstractFactoryPatterns/src&lt;Main{IMovieFactory.java[IMovieFactory" modifiers="513" timestamp="1478766673000"/>
+</typeInfoHistroy>

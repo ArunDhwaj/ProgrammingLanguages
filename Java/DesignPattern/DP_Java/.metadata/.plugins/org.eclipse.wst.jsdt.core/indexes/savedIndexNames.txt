@@ -1,0 +1,10 @@
+INDEX VERSION 1.3+/Users/sbp/MyLearning/DesignPattern/DP_Java/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+3949215600.index
+4246721603.index
+800261917.index
+4246576514.index
+2406369482.index
+3471378042.index
+1215488388.index
+146766413.index
+3318964248.index

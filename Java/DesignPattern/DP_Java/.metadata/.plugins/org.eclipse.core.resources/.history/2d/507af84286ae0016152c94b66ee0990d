@@ -1,0 +1,68 @@
+package com.crossover.journals.Models;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+/**
+ * 
+ * Models: Publisher: POJO to DB Table Mapping.
+ * @Author: Arun Dhwaj
+ * @Date: 19th Nov'16
+ * 
+ */
+
+@Entity
+@Table(name="Publisher")
+public class Publisher 
+{
+
+	private static final long serialVersionUID = -2016056248002296042L;
+	
+	@Id
+    @GeneratedValue
+    private Long id;
+
+    @OneToOne(optional = false)
+    @JsonIgnore
+    private User user;
+
+    @Column(nullable = false)
+    private String name;
+
+	public Long getId() 
+	{
+		return id;
+	}
+
+	public void setId(Long id) 
+	{
+		this.id = id;
+	}
+
+	public User getUser() 
+	{
+		return user;
+	}
+
+	public void setUser(User user) 
+	{
+		this.user = user;
+	}
+
+	public String getName() 
+	{
+		return name;
+	}
+
+	public void setName(String name) 
+	{
+		this.name = name;
+	}
+    
+}

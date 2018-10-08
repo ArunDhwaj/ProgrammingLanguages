@@ -1,0 +1,17 @@
+package com.crossover.journals.Models;
+
+public class Publisher 
+{
+
+	@Id
+    @GeneratedValue
+    private Long id;
+
+    @OneToOne(optional = false)
+    @JsonIgnore
+    private User user;
+
+    @Column(nullable = false)
+    private String name;
+    
+}

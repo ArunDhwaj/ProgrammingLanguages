@@ -1,0 +1,19 @@
+package com.crossover.journals.Models;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+/**
+ * 
+ * Models: Subscription: POJO to DB Table Mapping.
+ * @Author: Arun Dhwaj
+ * @Date: 19th Nov'16
+ * 
+ */
+
+@Entity
+@Table(name="Category")
+public class Category 
+{
+
+}

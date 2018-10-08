@@ -1,0 +1,20 @@
+package com.crossover.trial.journals.Scheduler;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class EmailNotification 
+{
+
+	//Send Email to every subscriber for this categories.
+	public void sendEmailToCategoriesSubscriber()
+	{
+		// Sending email to every subscriber of this categories after 9 minutes.
+	}
+
+	
+	public void sendEmailToAllSubscriber()
+	{
+		// Sending email to every subscribers of irrespective of the categories everyday at11.59 PM if there are any new journal is publish..
+	}
+}

@@ -1,0 +1,48 @@
+package com.crossover.journals.Models;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+/**
+ * 
+ * Models: Journal: POJO to DB Table Mapping.
+ * @Author: Arun Dhwaj
+ * @Date: 19th Nov'16
+ * 
+ */
+
+@Entity
+@Table(name="Journal")
+public class Journal 
+{
+	private static final long serialVersionUID = -2016046248002296042L;
+	
+	@Id
+	@GeneratedValue
+	private Long id;
+
+	@Column(nullable = false)
+	private String name;
+
+	@Column(nullable = false)
+	private Date publishDate;
+
+	@ManyToOne(optional = false)
+    @JoinColumn(name = "publisher_id")
+	private Publisher publisher;
+
+    @Column(nullable = false)
+    private String uuid; //external id
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "category_id")
+    private Category category;
+    
+}

@@ -1,0 +1,16 @@
+package com.crossover.trial.journals.Scheduler;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class EmailNotification 
+{
+
+	//Send Email to every subscriber for this categories.
+	public void sendEmailToCategoriesSubscriber()
+	{
+		// Sending email to every subscriber of this categories after 9 minutes.
+	}
+
+	
+}

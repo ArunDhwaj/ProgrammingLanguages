@@ -1,0 +1,22 @@
+package com.crossover.journals.Models;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+public class Publisher 
+{
+
+	@Id
+    @GeneratedValue
+    private Long id;
+
+    @OneToOne(optional = false)
+    @JsonIgnore
+    private User user;
+
+    @Column(nullable = false)
+    private String name;
+    
+}

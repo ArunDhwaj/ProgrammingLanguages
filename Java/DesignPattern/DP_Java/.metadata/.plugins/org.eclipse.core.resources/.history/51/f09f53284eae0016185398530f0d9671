@@ -1,0 +1,14 @@
+package com.crossover.journals.DAO;
+
+
+/**
+ * 
+ * Models: UserDAOImpl: POJO to DB Table Mapping.
+ * @Author: Arun Dhwaj
+ * @Date: 19th Nov'16
+ * 
+ */
+public class UserDAOImpl implements UserDAO 
+{
+
+}

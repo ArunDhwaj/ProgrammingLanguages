@@ -1,0 +1,46 @@
+package com.crossover.trial.journals.service;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import com.crossover.trial.journals.model.Category;
+import com.crossover.trial.journals.model.Journal;
+import com.crossover.trial.journals.repository.CategoryRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.crossover.trial.journals.model.Subscription;
+import com.crossover.trial.journals.model.User;
+import com.crossover.trial.journals.repository.UserRepository;
+
+@Service
+public class NotificationServiceImpl implements NotificationService 
+{
+
+	@Autowired
+	private UserRepository userRepository;
+
+	@Autowired
+	private CategoryRepository categoryRepository;
+
+	@Autowired
+	public NotificationServiceImpl(UserRepository userRepository) 
+	{
+		this.userRepository = userRepository;
+	}
+
+	@Override
+	void sendNotificationInstantly( Long categoryId, Journal journal)
+    {
+    	
+    }
+    
+	@Override
+    void sendNotificationDaily()
+    {
+    	
+    }
+    
+
+}

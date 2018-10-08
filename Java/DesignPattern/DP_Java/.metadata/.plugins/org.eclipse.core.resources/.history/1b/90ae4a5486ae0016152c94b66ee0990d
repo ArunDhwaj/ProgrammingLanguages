@@ -1,0 +1,15 @@
+package com.crossover.journals.Services;
+
+
+/**
+ * 
+ * Service: JournalService
+ * @Author: Arun Dhwaj
+ * @Date: 19th Nov'16
+ * 
+ */
+
+public interface JournalService 
+{
+
+}

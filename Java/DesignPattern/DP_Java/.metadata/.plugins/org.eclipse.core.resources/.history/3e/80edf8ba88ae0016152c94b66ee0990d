@@ -1,0 +1,14 @@
+package com.crossover.CrossOverJournals.DAO;
+
+/**
+ * 
+ * DAO: UserDAO
+ * @Author: Arun Dhwaj
+ * @Date: 19th Nov'16
+ * 
+ */
+
+public interface UserDAO 
+{
+
+}

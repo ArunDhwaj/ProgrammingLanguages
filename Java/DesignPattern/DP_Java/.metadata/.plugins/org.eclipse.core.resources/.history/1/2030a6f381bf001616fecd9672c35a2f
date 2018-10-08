@@ -1,0 +1,6 @@
+package com.crossover.trial.journals.Scheduler;
+
+public class EmailNotification 
+{
+
+}

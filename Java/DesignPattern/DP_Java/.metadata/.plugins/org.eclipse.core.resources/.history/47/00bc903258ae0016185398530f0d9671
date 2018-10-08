@@ -1,0 +1,26 @@
+package com.crossover.journals.Services;
+
+import org.springframework.stereotype.Service;
+import com.crossover.journals.DAO.UserDAO;
+
+/**
+ * 
+ * Service: CategoryServiceImpl
+ * @Author: Arun Dhwaj
+ * @Date: 19th Nov'16
+ * 
+ */
+
+@Service("CategoryService")
+public class CategoryServiceImpl implements UserService 
+{
+	
+	private UserDAO userDAO;
+	
+	public void setUserDAO(UserDAO userDAO) 
+    {
+		System.out.println("1.1 UserServiceImpl: setUserDAO: userDAO :" + userDAO);
+        this.userDAO = userDAO;
+    }
+	
+}

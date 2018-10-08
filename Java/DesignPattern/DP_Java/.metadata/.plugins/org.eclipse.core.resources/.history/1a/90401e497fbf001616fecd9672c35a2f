@@ -1,0 +1,23 @@
+package com.crossover.trial.journals.Scheduler;
+
+import org.springframework.scheduling.annotation.EnableScheduling;
+4
+import org.springframework.scheduling.annotation.Scheduled;
+5
+import org.springframework.stereotype.Service;
+6
+ 
+7
+import java.util.Date;
+8
+ 
+9
+@Service
+10
+@EnableScheduling
+
+
+public class Scheduler 
+{
+
+}

@@ -1,0 +1,5 @@
+package com.crossover.journals.Services;
+
+public interface UserService {
+
+}

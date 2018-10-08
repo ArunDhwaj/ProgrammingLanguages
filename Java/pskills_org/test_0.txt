@@ -1,0 +1,392 @@
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+Ques 1 :
+What gets printed when the following program is compiled and run. Select the one correct answer. 
+
+class test 
+{
+    public static void main(String args[]) 
+    {
+        int i,j,k,l=0;
+        k = l++;
+        j = ++k;
+        i = j++;
+        System.out.println(i);      
+    }
+}
+
+(A) 0 
+(B) 1 
+(C) 2 
+(D) 3 
+Answer : 1
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+Ques 2 :
+What is the result of compiling and running the following program. Select the one correct answer.
+
+class test 
+{
+    public static void main(String args[]) 
+    {
+        int[] arr = {1,2,3,4};
+        call_array(arr[0], arr);
+        System.out.println(arr[0] + "," + arr[1]);        
+    }
+
+    static void call_array(int i, int arr[]) 
+    {
+        arr[i] = 6;
+        i = 5;
+    }    
+}
+
+(A) 1,2 
+(B) 5,2 
+(C) 1,6 
+(D) 5,6 
+Answer : 1,6 
+
+Description : In the invocation of call_array, the first element is invoked using call-by-value, and the second using call-by-reference.
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+Ques 3 :
+
+Which of these are interfaces in the collection framework. Select the two correct answers. 
+
+a.  Set
+b.  List
+c.  Array
+d.  Vector
+e.  LinkedList
+
+(A) a,b,c 
+(B) a,b 
+(C) b,c,d,e 
+(D) c,d 
+Answer : a,b
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+Ques 4 :
+What happens if sleep() and wait() executes in synchronized block?
+
+(A) The object still under lock in both the cases. 
+(B) sleep() the lock is removed, wait() still under lock. 
+(C) sleep() still under lock, wait() the lock is removed. 
+(D) Sleep() and wait(), for both the method lock is removed.
+
+ Answer: sleep() still under lock, wait() the lock is removed.
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+Ques 5 :
+Which all lines are part of the output when the following code is compiled and run. Select the six correct answers. 
+
+public class test 
+{
+    public static void main(String args[]) 
+    {
+        for(int i = 0; i < 3; i++) 
+        {
+            for(int j = 3; j >= 0; j--)
+            {
+                if(i == j) break;
+                System.out.println(i + " " + j);
+            }
+        }
+    }
+}
+
+a.  0 0 
+b.  0 1 
+c.  0 2 
+d.  0 3 
+e.  1 0 
+f.  1 1 
+g.  1 2 
+h.  1 3 
+i.  2 0 
+j.  2 1 
+k.  2 2 
+l.  2 3 
+m.  3 0 
+N.  3 1 
+O.  3 2 
+P.  3 3 
+
+(A) a, b, c, f, h, i 
+(B) c, d, g, h, i, k 
+(C) b, c, d, g, h, l 
+(D) d, e, f, g, j, k 
+Answer : b, c, d, g, h, l
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+Ques 6 :
+What will be the output of the program?
+
+public class Foo 
+{  
+    public static void main(String[] args) 
+    {
+        try 
+        { 
+            return; 
+        } 
+
+        finally 
+        {
+            System.out.println( "Finally" ); 
+        } 
+    } 
+}
+
+(A) Finally. 
+(B) Compilation fails. 
+(C) The code runs with no output. 
+(D) An exception is thrown at runtime. 
+
+Answer: Finally Description :
+If you put a finally block after a try and its associated catch blocks, then once execution enters the try block, the code in that finally block will definitely 
+be executed except in the following circumstances:
+
+An exception arising in the finally block itself.
+The death of the thread.
+The use of System.exit()
+Turning off the power to the CPU.
+I suppose the last three could be classified as VM shutdown.
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+Ques 7 :
+In which all cases does an exception gets generated. Select the two correct answers. 
+int i = 0, j = 1; 
+a.  if((i == 0) || (j/i == 1)) 
+b.  if((i == 0) | (j/i == 1)) 
+c.  if((i != 0) && (j/i == 1)) 
+d.  if((i != 0) & (j/i == 1)) 
+
+(A) a, c 
+(B) b, c 
+(C) b, d 
+(D) a, d 
+Answer : b, d
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+Ques 8 :
+What is the default priority of a newly created thread.?
+(A) MIN_PRIORITY (which is defined as 1 in the Thread class.) 
+(B) NORM_PRIORITY (which is defined as 5 in the Thread class.) 
+(C) MAX_PRIORITY (which is defined as 10 in the Thread class.) 
+(D) A thread inherits the priority of its parent thread. 
+Answer : A thread inherits the priority of its parent thread.
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+Ques 9 :
+What will be the output of the program?
+
+class Exc0 extends Exception { } 
+class Exc1 extends Exc0 { } /* Line 2 */
+
+public class Test 
+{  
+    public static void main(String args[]) 
+    { 
+        try 
+        {  
+            throw new Exc1(); /* Line 9 */
+        } 
+        catch (Exc0 e0) /* Line 11 */
+        {
+            System.out.println("Ex0 caught"); 
+        } 
+        catch (Exception e) 
+        {
+            System.out.println("exception caught");  
+        } 
+    } 
+}
+
+(A) Ex0 caught. 
+(B) exception caught. 
+(C) Compilation fails because of an error at line 2. 
+(D) Compilation fails because of an error at line 9. 
+
+Answer : Ex0 caught Description :
+An exception Exc1 is thrown and is caught by the catch statement on line 11. The code is executed in this block. There is no finally block of code to execute.
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+Ques 10 : Using up to four characters what is the Java representation of the number 23 in hex?
+
+(A) 0x17. 
+(B) 0x18. 
+(C) 0x19. 
+(D) 0x20.
+
+Answer : 0x17
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+Ques 11 :
+What kind of thread is the Garbage collector thread is?
+
+(A) Non daemon thread. 
+(B) Daemon thread. 
+(C) Thread with dead state. 
+(D) None of the above.
+ 
+ Answer : Daemon thread
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+Ques 12 :
+Which of the following are legal array declarations. Select the three correct answers. 
+
+a.  int i[5][];
+b.  int i[][]; 
+c.  int []i[];
+d.  int i[5][5]; 
+e.  int[][] a; 
+
+(A) a, d, e 
+(B) b, c, d 
+(C) b, c, e 
+(D) a, c, e 
+
+Answer : b, c, e
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+Ques 13 :
+What happens when the following program is compiled and executed with the command - java test. Select the one correct answer. 
+
+class test 
+{
+    public static void main(String args[])
+    {
+        if(args.length > 0)
+            System.out.println(args.length);
+    }
+}
+
+(A) The program compiles and runs but does not print anything. 
+(B) The program compiles and runs and prints 0. 
+(C) The program compiles and runs and prints 1. 
+(D) The program compiles and runs and prints 2.
+
+ Answer: The program compiles and runs but does not print anything.
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+Ques 14 :
+Which expression can be used to access the last element of an array. Select the one correct answer.
+
+(A) array[array.length] 
+(B) array[array.length - 1] 
+(C) array[array.length() - 1] 
+(D) array[array.length()] 
+
+Answer: array[array.length - 1] 
+Description : array.length gives the number of elements in the array. As indexes in Java start from 0, d is the correct answer.
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+Ques 15 :
+public void test(int x) 
+{ 
+    int odd = 1; 
+    if(odd) /* Line 4 */
+    {
+        System.out.println("odd"); 
+    } 
+    else 
+    {
+        System.out.println("even"); 
+    } 
+}
+
+Which statement is true?
+(A) "odd" will always be output. 
+(B) "even" will always be output. 
+(C) Compilation fails. 
+(D) "odd" will be output for odd values of x, and "even" for even values. 
+
+Answer : Compilation fails. 
+
+Description :
+The compiler will complain because of incompatible types (line 4), the if expects a boolean but it gets an integer.
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+Ques 16 :
+String s = new String("xyz"); 
+Assuming the above declaration, which of the following statements would compile. Select the one correct answer.
+
+(A) s = 2 * s; 
+(B) int i = s[0]; 
+(C)  s = s + s; 
+(D) s = s >> 2; 
+Answer : s = s + s;
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+Ques 17 :
+What gets displayed on the screen when the following program is compiled and run. Select the one correct answer. 
+
+public class test 
+{
+    public static void main(String args[]) 
+    {
+        int x, y;
+        x = 5 >> 2;
+        y = x >>> 2;
+    
+        System.out.println(y);
+    }
+}
+
+(A) 5 
+(B) 2 
+(C) 80 
+(D) 0 
+Answer : 0
+
+Note: ">>>" unsigned shift
+
+////////////////////////////////////////////////////////////////////////////////////////////
+Ques 18 : What is the meaning of the return data type void?
+
+(A) An empty memory space is returned so that the developers can utilize it. 
+(B) void is not supported in Java.
+(C) void returns no data type. 
+(D) null.
+
+ Answer : void returns no data type.
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+Ques 19 :
+What happens when the following code is compiled and run. Select the one correct answer.
+
+for(int i = 1; i < 4; i++)
+    for(int j = 1; j < 4; j++)
+        if(i < j)
+            assert i!=j : i; 
+(A) The class compiles and runs, but does not print anything. 
+(B) The number 1 gets printed with AssertionError. 
+(C) The number 2 gets printed with AssertionError. 
+(D) The number 3 gets printed with AssertionError. 
+
+Answer: The class compiles and runs, but does not print anything. Description : When the if condition returns true, the assert statement also returns true. 
+Hence AssertionError does not get generated. 
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+Ques 20 :
+Which of the following are valid constructors within a class Test. Select the two correct answers. 
+a. test() { } 
+b. Test() { } 
+c. void Test() { } 
+d. private final Test() { } 
+e. abstract Test() { } 
+f. Test(Test t) { } 
+g. Test(void) { } 
+
+(A) b, d 
+(B) c, f 
+(C) b, c 
+(D) b, f 
+
+Answer : b, f Description : A constructor must have the same name as the class, hence a is not a constructor. It must not return any value, hence c is not correct. A constructor cannot be declared abstract or final. 

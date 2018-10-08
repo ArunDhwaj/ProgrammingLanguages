@@ -1,0 +1,10 @@
+package com.crossover.journals.Services;
+
+import org.springframework.stereotype.Service;
+
+
+@Service("UserService")
+public class UserServiceImpl implements UserService 
+{
+
+}

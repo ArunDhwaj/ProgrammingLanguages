@@ -1,0 +1,12 @@
+package com.crossover.trial.journals.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.crossover.trial.journals.model.User;
+
+public interface UserRepository extends JpaRepository<User, Long> 
+{
+
+    User findByLogin_name(String login_name);
+
+}

@@ -1,0 +1,15 @@
+package com.crossover.journals.Services;
+
+
+/**
+ * 
+ * Service: CategoryService
+ * @Author: Arun Dhwaj
+ * @Date: 19th Nov'16
+ * 
+ */
+
+public interface CategoryService 
+{
+
+}

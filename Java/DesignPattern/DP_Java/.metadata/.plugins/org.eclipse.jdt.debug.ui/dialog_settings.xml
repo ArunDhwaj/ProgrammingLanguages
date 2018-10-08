@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.jdt.debug.ui.MAIN_METHOD_SELECTION_DIALOG">
+		<item value="true" key="ShowStatusLine"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History&gt;&#x0A;&lt;historyRootNode&gt;&#x0A;&lt;infoNode&gt;=test/\/Users\/sbp\/.m2\/repository\/junit\/junit\/4.7\/junit-4.7.jar&amp;lt;junit.runner(Version.class[Version&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=test/\/Users\/sbp\/.m2\/repository\/javax\/servlet\/jstl\/1.2\/jstl-1.2.jar&amp;lt;org.apache.taglibs.standard.lang.jstl.parser(ELParser.class[ELParser&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=test/\/Users\/sbp\/.m2\/repository\/junit\/junit\/4.7\/junit-4.7.jar&amp;lt;junit.textui(TestRunner.class[TestRunner&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=JavaDP/src&amp;lt;main{Home.java[Home&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=ObserverPattern/src&amp;lt;Main{ObserverPatternDemo.java[ObserverPatternDemo&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=SingletonPattern/src&amp;lt;Main{SingletonPattternDemo.java[SingletonPattternDemo&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=1ObserverPattern/src&amp;lt;Main{ObserverPatternDemo.java[ObserverPatternDemo&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=ObserverPattern/\/Users\/sbp\/MyProjects\/SampooranHealth\/ShServer\/ShIDEs\/STS-3.8.2\/sts-bundle\/STS.app\/Contents\/Eclipse\/plugins\/org.junit_4.12.0.v201504281640\/junit.jar&amp;lt;org.junit.runner(JUnitCore.class[JUnitCore&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=2SingletonPattern/src&amp;lt;Main{SingletonPattternDemo.java[SingletonPattternDemo&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=4DecoratorPattern/src&amp;lt;Main{DecoratorPatternDemo.java[DecoratorPatternDemo&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=journals/\/Users\/sbp\/.m2\/repository\/org\/apache\/tomcat\/embed\/tomcat-embed-core\/8.0.32\/tomcat-embed-core-8.0.32.jar&amp;lt;org.apache.catalina.startup(Tomcat$1.class[&lt;/infoNode&gt;&#x0A;&lt;/historyRootNode&gt;&#x0A;&lt;/History&gt;" key="History"/>
+		<section name="DialogBoundsSettings">
+			<item value="600" key="DIALOG_WIDTH"/>
+			<item value="1|.SF NS Text|11.0|0|COCOA|1|.SFNSText-Regular" key="DIALOG_FONT_NAME"/>
+			<item value="500" key="DIALOG_HEIGHT"/>
+			<item value="340" key="DIALOG_X_ORIGIN"/>
+			<item value="32" key="DIALOG_Y_ORIGIN"/>
+		</section>
+	</section>
+</section>

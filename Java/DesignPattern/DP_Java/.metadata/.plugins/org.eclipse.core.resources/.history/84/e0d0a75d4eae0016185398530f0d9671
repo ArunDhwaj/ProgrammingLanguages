@@ -1,0 +1,29 @@
+package com.crossover.journals.DAO;
+
+import javax.annotation.Resource;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+
+/**
+ * 
+ * Models: UserDAOImpl: POJO to DB Table Mapping.
+ * @Author: Arun Dhwaj
+ * @Date: 19th Nov'16
+ * 
+ */
+public class UserDAOImpl implements UserDAO 
+{
+
+	 private static final Logger logger = LoggerFactory.getLogger(UserDAOImpl.class);
+	    
+		@Resource(name="sessionFactory")
+		private SessionFactory sessionFactory;
+	     
+	    public void setSessionFactory(SessionFactory sf)
+	    {
+	        this.sessionFactory = sf;
+	    }
+	    
+}

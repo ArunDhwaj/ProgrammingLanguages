@@ -1,0 +1,26 @@
+package com.crossover.journals.Services;
+
+import org.springframework.stereotype.Service;
+import com.crossover.journals.DAO.UserDAO;
+
+/**
+ * 
+ * Service: JournalService
+ * @Author: Arun Dhwaj
+ * @Date: 19th Nov'16
+ * 
+ */
+
+@Service("UserService")
+public class JournalServiceImpl implements JournalService 
+{
+	
+	private JournalDAO journalDAO;
+	
+	public void setJournalDAO(JournalDAO journalDAO) 
+    {
+		System.out.println("1.1 UserServiceImpl: setUserDAO: userDAO :" + userDAO);
+        this.userDAO = userDAO;
+    }
+	
+}

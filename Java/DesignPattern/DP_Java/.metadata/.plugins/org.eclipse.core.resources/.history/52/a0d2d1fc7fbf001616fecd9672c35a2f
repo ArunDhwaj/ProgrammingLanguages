@@ -1,0 +1,28 @@
+package com.crossover.trial.journals.Scheduler;
+
+
+import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Service;
+
+import java.util.Date;
+
+@Service
+@EnableScheduling
+public class Scheduler 
+{
+	//Sending email at 11:59 PM everyday
+	@Scheduled(cron = "10 * * * * *")
+	public void cronTaskAt_1159PM()
+	{
+		System.out.println(new Date() + " This runs in a cron schedule");
+	}
+
+	//Sending email at 11:59 PM everyday
+	@Scheduled(cron = "10 * * * * *")
+	public void cronTaskAt_1159PM()
+	{
+		System.out.println(new Date() + " This runs in a cron schedule");
+	}
+
+}

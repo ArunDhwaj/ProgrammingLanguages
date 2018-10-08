@@ -1,0 +1,43 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-4.0.xsd">
+
+
+http.authorizeRequests().antMatchers("/home", "/", "/css/**", "/js/**", "/images/**", "/public/rest/**")
+				.permitAll().antMatchers("/publisher/**").hasAuthority("PUBLISHER").anyRequest().fullyAuthenticated()
+				.and().formLogin().loginPage("/login").failureUrl("/login?error").usernameParameter("username")
+				.permitAll().and().logout().logoutUrl("/logout").logoutSuccessUrl("/login?logout").permitAll().and()
+				.exceptionHandling().accessDeniedPage("/403").and().csrf().disable();
+					
+	<http auto-config="true">
+		<intercept-url pattern="/publisher/**" access="hasRole('ROLE_PUBLISHER')" />
+		<intercept-url pattern="/home" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+		<intercept-url pattern="/" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+		<intercept-url pattern="/css/**" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+		<intercept-url pattern="/js/**" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+		
+	    <intercept-url pattern="/index.jsp" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+	    <intercept-url pattern="/login.jsp*" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+	    <intercept-url pattern="/admin/*" access="ROLE_ADMIN"/>
+	    <intercept-url pattern="/secret/*" access="ROLE_SECRET"/>
+	    <intercept-url pattern="/**" access="ROLE_USER,ROLE_ADMIN,ROLE_SECRET"/>
+	    
+	    <csrf disabled="true" />
+	</http>
+
+	<authentication-manager>
+		<authentication-provider>
+			<user-service>
+				<user name="publisher1" password="publisher1" authorities="ROLE_PUBLISHER" />
+				<user name="publisher2" password="publisher2" authorities="ROLE_PUBLISHER" />
+				<user name="user1" password="user1" authorities="ROLE_USER" />
+				<user name="user2" password="user2" authorities="ROLE_USER" />
+			</user-service>
+		</authentication-provider>
+	</authentication-manager>
+
+</beans:beans>

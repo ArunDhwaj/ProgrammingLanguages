@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+
+	<!-- 2.1: Arun Dhwaj: DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
+	
+	<!-- 2.2: Arun Dhwaj: Enables the Spring MVC @Controller programming model -->
+	<annotation-driven />
+
+	<!-- 2.3: Arun Dhwaj: Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
+	<resources mapping="/resources/**" location="/resources/" />
+
+	<!-- 2.4: Arun Dhwaj: Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
+	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<beans:property name="suffix" value=".jsp" />
+	</beans:bean>
+	
+	<!-- 2.5: Arun Dhwaj: Base Package Scan -->
+	<context:component-scan base-package="com.crossover.journals.Controllers" />
+	
+	<!-- 2.6: Arun Dhwaj: transactionManager - 19th Nov'16 - Start -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+		
+	<!-- 2.7: Arun Dhwaj: default-servlet-handler - 19th Nov'16 - Start -->
+	<default-servlet-handler/>
+	
+	<!-- 2.8: Arun Dhwaj: uploading the pdf file - 19th Nov'16 - Start -->
+	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+	
+	<!-- 2.9: Arun Dhwaj: Connecting MySQL Database Engine, and Using CrossOverJournal databse - 19th Nov'16 - Start -->
+	<beans:bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <beans:property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <beans:property name="url" value="jdbc:mysql://localhost:3306/CrossOverJournal" />
+        <beans:property name="username" value="root" />
+        <beans:property name="password" value="root" />
+	</beans:bean>
+	<!-- 2.9: Arun Dhwaj: Connecting MySQL Database Engine, and Using CrossOverJournal databse - 19th Nov'16 - End -->
+	
+	<!-- 2.10: Arun Dhwaj: EmailThreadPool - It will send the email asynchronously - 19th Nov'16 - Start -->
+ 	<beans:bean id="EmailThreadPool" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+		<beans:property name="corePoolSize" value="5" />
+		<beans:property name="maxPoolSize" value="10" />
+		<beans:property name="queueCapacity" value="15" />
+	</beans:bean>
+	<!-- 2.10: Arun Dhwaj: EmailThreadPool - It will send the email asynchronously - 19th Nov'16 - End -->
+	
+	<!-- 2.11: Arun Dhwaj: Hibernate 4 SessionFactory Bean definition - 19th Nov'16 - Start -->
+    <beans:bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <beans:property name="dataSource" ref="dataSource" />
+        <beans:property name="annotatedClasses">
+            <beans:list>
+            	<beans:value>com.crossover.journals.Models.Category</beans:value>
+            	<beans:value>com.crossover.journals.Models.Journal</beans:value>            
+	           	<beans:value>com.crossover.journals.Models.Publisher</beans:value>
+	           	<beans:value>com.crossover.journals.Models.Subscription</beans:value>
+				<beans:value>com.crossover.journals.Models.User</beans:value>
+            </beans:list>
+        </beans:property>
+        <beans:property name="hibernateProperties">
+            <beans:props>
+                <beans:prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect
+                </beans:prop>
+                
+                <!-- Enable this to see the SQL statements in the logs-->
+                <beans:prop key="hibernate.show_sql">true</beans:prop>
+                  
+    			<!-- This will drop our existing database and re-create a new one. -->
+    			<!-- Existing data will be deleted! -->
+<!--     		<beans:prop key="hibernate.hbm2ddl.auto">update</beans:prop>  -->
+				<beans:prop key="hibernate.hbm2ddl.auto">create</beans:prop>
+                
+                <!-- Arun Dhwaj: Purpose to overcome the issue of org.hibernate.LazyInitializationException - could not 
+                initialize proxy -->
+                <beans:prop key="hibernate.enable_lazy_load_no_trans">true</beans:prop>
+                 
+            </beans:props>
+        </beans:property>
+    </beans:bean>
+	<!-- 2.11: Arun Dhwaj: Hibernate 4 SessionFactory Bean definition - 19th Nov'16 - End -->
+	
+	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<!-- 2.12: Arun Dhwaj: DAO Layer is dependent on Hibernate. So, set sessionFactory as its property - 19th Nov'16 - Start ////// -->
+	
+	<!-- 2.12.1: Arun Dhwaj: userDAO is dependent on Hibernate. So, set sessionFactory as its property - 19th Nov'16 - Start -->
+	<beans:bean id="userDAO" class="com.crossover.journals.DAO.UserDAOImpl">
+        <beans:property name="sessionFactory" ref="sessionFactory" />
+    </beans:bean>
+    <!-- 2.12.1: Arun Dhwaj: userDAO is dependent on Hibernate. So, set sessionFactory as its property - 19th Nov'16 - End //////// -->
+	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	
+	<!-- 2.12: Arun Dhwaj: DAO Layer is dependent on Hibernate. So, set sessionFactory as its property - 19th Nov'16 - End //////// -->
+	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	
+	<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<!-- 2.13: Arun Dhwaj: Service Layer is dependent on Hibernate. So, set sessionFactory as its property - 19th Nov'16 - Start //////// -->
+	
+	<!-- 2.13.1: Arun Dhwaj: userService is dependent on userDAO. So, set userDAO as its property - 19th Nov'16 - Start -->
+	<beans:bean id="userService" class="com.crossover.journals.Services.UserServiceImpl">
+        <beans:property name="userDAO" ref="userDAO"></beans:property>
+    </beans:bean>
+    <!-- 2.13.1: Arun Dhwaj: userService is dependent on userDAO. So, set userDAO as its property - 19th Nov'16 - End -->
+    
+	<!-- 2.13: Arun Dhwaj: Service Layer is dependent on Hibernate. So, set sessionFactory as its property - 19th Nov'16 - End ////////// -->
+	<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	
+	
+</beans:beans>

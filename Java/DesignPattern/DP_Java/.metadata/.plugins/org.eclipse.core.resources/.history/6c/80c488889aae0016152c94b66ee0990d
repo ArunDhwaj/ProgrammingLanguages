@@ -1,0 +1,16 @@
+package com.crossover.trial.journals.service;
+
+import java.util.Optional;
+
+import com.crossover.trial.journals.model.User;
+
+public interface UserService 
+{
+
+    Optional<User> getUserByLogin_name(String login_name);
+
+    void subscribe(User user, Long categoryId);
+
+    User findById(Long id);
+
+}

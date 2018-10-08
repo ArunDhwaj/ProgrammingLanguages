@@ -1,0 +1,1 @@
+CREATE SCHEMA `CrossOverJournal` DEFAULT CHARACTER SET utf8 ;

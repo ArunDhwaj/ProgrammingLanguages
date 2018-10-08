@@ -1,0 +1,15 @@
+package com.crossover.CrossOverJournals.Services;
+
+
+/**
+ * 
+ * Service: UserServiceImpl
+ * @Author: Arun Dhwaj
+ * @Date: 19th Nov'16
+ * 
+ */
+
+public interface UserService 
+{
+
+}

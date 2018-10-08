@@ -1,0 +1,16 @@
+package com.crossover.journals.Services;
+
+
+/**
+ * 
+ * Models: UserDAO: POJO to DB Table Mapping.
+ * @Author: Arun Dhwaj
+ * @Date: 19th Nov'16
+ * 
+ */
+
+
+public interface UserService 
+{
+
+}

@@ -1,0 +1,14 @@
+package com.crossover.journals.DAO;
+
+/**
+ * 
+ * Models: User: POJO to DB Table Mapping.
+ * @Author: Arun Dhwaj
+ * @Date: 19th Nov'16
+ * 
+ */
+
+public interface UserDAO 
+{
+
+}

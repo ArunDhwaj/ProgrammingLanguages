@@ -1,0 +1,6 @@
+package com.crossover.CrossOverJournals.Models;
+
+public enum Role 
+{
+	USER, PUBLISHER
+}

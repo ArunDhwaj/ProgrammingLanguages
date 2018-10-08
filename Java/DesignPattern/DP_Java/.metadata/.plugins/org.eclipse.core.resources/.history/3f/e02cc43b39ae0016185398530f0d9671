@@ -1,0 +1,5 @@
+package com.crossover.journals.Models;
+
+public class Subscription {
+
+}

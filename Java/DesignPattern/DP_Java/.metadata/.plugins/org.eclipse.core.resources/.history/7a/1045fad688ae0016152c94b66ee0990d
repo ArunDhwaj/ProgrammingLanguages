@@ -1,0 +1,27 @@
+package com.crossover.CrossOverJA.Services;
+
+import org.springframework.stereotype.Service;
+
+import com.crossover.CrossOverJournals.DAO.SubscriptionDAO;
+
+/**
+ * 
+ * Service: UserServiceImpl
+ * @Author: Arun Dhwaj
+ * @Date: 19th Nov'16
+ * 
+ */
+
+@Service("subscriptionService")
+public class SubscriptionServiceImpl implements SubscriptionService 
+{
+	
+	private SubscriptionDAO subscriptionDAO;
+	
+	public void setSubscriptionDAO(SubscriptionDAO subscriptionDAO) 
+    {
+		System.out.println("1.1 SubscriptionServiceImpl: setSubscriptionDAO: subscriptionDAO :" + subscriptionDAO);
+        this.subscriptionDAO = subscriptionDAO;
+    }
+	
+}
