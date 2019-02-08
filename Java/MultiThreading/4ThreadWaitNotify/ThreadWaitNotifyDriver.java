@@ -43,3 +43,20 @@ public class ThreadWaitNotifyDriver
         }
     }
 }
+
+/*
+/////////////////////////Output /////////////////////
+
+All the threads are started
+waiter1: waiting to get notified at time: 32
+notifier1 started at time: 32
+waiter2: waiting to get notified at time: 33
+notifier1  thread, now getting this message: notifier1: thread work is done
+waiter2: waiter thread got notified at time: 2038
+waiter2: waiter thread: Processing the Message now.
+waiter2: waiter thread: Processed message: New Message from Waiter
+waiter1: waiter thread got notified at time: 2039
+waiter1: waiter thread: Processing the Message now.
+waiter1: waiter thread: Processed message: New Message from Waiter
+All threads are dead, exiting main thread::: 2040: main
+*/
