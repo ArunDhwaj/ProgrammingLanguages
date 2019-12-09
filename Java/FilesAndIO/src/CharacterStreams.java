@@ -18,7 +18,7 @@ public class CharacterStreams
 
         try
         {
-            fr = new FileReader("/home/smartbitpixel/Desktop/output1.txt");
+            fr = new FileReader("/home/smartbitpixel/Desktop/output11.txt");
             fw = new FileWriter("/home/smartbitpixel/Desktop/output5.txt");
 
             int c;
@@ -33,6 +33,8 @@ public class CharacterStreams
         }
        finally
         {
+            System.out.println("1.1 Finally block" );
+
             if (fr != null)
             {
                 fr.close();
@@ -42,7 +44,11 @@ public class CharacterStreams
             {
                 fw.close();
             }
+
+            System.out.println("1.2 Finally block" );
         }
+
+        System.out.println("1.3 Finally block" );
     }
 
     public void readWriteByCharStreaming(FileReader fr, FileWriter fw) throws IOException, FileNotFoundException
