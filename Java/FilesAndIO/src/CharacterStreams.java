@@ -22,7 +22,8 @@ public class CharacterStreams
             fw = new FileWriter("/home/smartbitpixel/Desktop/output5.txt");
 
             int c;
-            while ((c = fr.read()) != -1) {
+            while ((c = fr.read()) != -1)
+            {
                 fw.write(c);
             }
         }
@@ -32,11 +33,13 @@ public class CharacterStreams
         }
        finally
         {
-            if (fr != null) {
+            if (fr != null)
+            {
                 fr.close();
             }
 
-            if (fw != null) {
+            if (fw != null)
+            {
                 fw.close();
             }
         }
@@ -51,7 +54,8 @@ public class CharacterStreams
             fw = new FileWriter("/home/smartbitpixel/Desktop/output3.txt");
 
             int c;
-            while ((c = fr.read()) != -1) {
+            while ((c = fr.read()) != -1)
+            {
                 fw.write(c);
             }
         }
@@ -62,11 +66,13 @@ public class CharacterStreams
         }
        finally
         {
-            if (fr != null) {
+            if (fr != null)
+            {
                 fr.close();
             }
 
-            if (fw != null) {
+            if (fw != null)
+            {
                 fw.close();
             }
         }
