@@ -1,9 +1,0 @@
-package com.crossover.trial.journals.Scheduler;
-
-import org.springframework.stereotype.Component;
-
-@Component
-public class EmailNotification 
-{
-
-}

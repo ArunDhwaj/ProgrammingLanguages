@@ -1,8 +1,0 @@
-package com.crossover.journals.Models;
-
-@Entity
-@Table(name="User")
-public class User 
-{
-
-}

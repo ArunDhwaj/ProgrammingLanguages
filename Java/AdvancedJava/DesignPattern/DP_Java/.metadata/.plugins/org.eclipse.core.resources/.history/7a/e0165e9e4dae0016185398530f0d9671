@@ -1,5 +1,0 @@
-package com.crossover.journals.DAO;
-
-public class UserDAOImpl {
-
-}

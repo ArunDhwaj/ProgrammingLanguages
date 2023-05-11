@@ -1,7 +1,0 @@
-package com.crossover.journals.Services;
-
-@Service("UserService")
-public class UserServiceImpl implements UserService 
-{
-
-}
